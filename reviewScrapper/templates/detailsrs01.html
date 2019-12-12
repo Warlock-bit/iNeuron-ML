@@ -1,0 +1,29 @@
+{% extends "basers01.html" %}
+{% block foo %}
+
+<div class="table-users">
+   <div class="header text-center font-weight-bold text-white">Reviews</div>
+   <h1>{{searchString}}</h1>
+
+   <table cellspacing="0"  class="table table-dark table-hover">
+      <tr>
+         <th>Product</th>
+         <th>Name</th>
+         <th>Rating</th>
+         <th>Comment Heading</th>
+         <th width="230">Comments</th>
+      </tr>
+         {% for review in reviews %}
+      <tr>
+          <td>{{review['Product']}}</td>
+         <td>{{review['Name']}}</td>
+         <td>{{review['Rating']}}</td>
+         <td>{{review['CommentHead']}}</td>
+         <td>{{review['Comment']}} </td>
+       {% endfor %}
+   </table>
+   <!-- <div class="container" align="left">
+		<a href="{{url_for('return_files_tut')}}" target="blank"><button class='btn btn-default'>Download!</button></a>
+   </div> -->
+</div>
+{% endblock %}
