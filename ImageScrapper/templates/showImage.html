@@ -1,0 +1,26 @@
+<!-- <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Scrapped Images</title>
+</head>
+<body> -->
+{% extends "basers01.html" %}
+{% block foo %}
+
+
+<div class="table-users">
+   <div class="p-3 mb-2 bg-primary text-white text-center font-italic">Some of the scrapped images of : {{keyWord}}</div>
+    <table>
+{% for user_image in user_images %}
+
+        <td width="400">
+            <img width="300" height="300" class="img-rounded" src="{{ url_for('static', filename=user_image) }}" alt="User Image">
+        </td>
+
+{% endfor %}
+    </table>
+</div>
+{% endblock %}
+<!-- </body>
+</html> -->

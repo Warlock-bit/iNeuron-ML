@@ -1,0 +1,12 @@
+{% extends "basers01.html" %}
+{% block foo %}
+
+<div class="container p-3 my-3 bg-primary text-white">
+  <h1>Enter Product to search for...</h1>
+  <form action="{{url_for('show_details')}}"  method="POST">
+     <input type="text" name="pname" placeholder="Enter product name">
+     <input class="btn btn-dark" type="submit" name="Submit" value="Submit">
+  </form>
+</div>
+
+{% endblock %}
